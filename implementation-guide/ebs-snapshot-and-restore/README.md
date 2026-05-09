@@ -119,7 +119,7 @@ sudo mount /dev/xvdb /data
 
 ## 5️⃣ Data Written to EBS
 
-![Data Written](./5-Data-Written-to-EBS.png)
+![Data Written](./5-Data-written-to-EBS.png)
 
 This screenshot shows application data written into the mounted EBS volume.
 
