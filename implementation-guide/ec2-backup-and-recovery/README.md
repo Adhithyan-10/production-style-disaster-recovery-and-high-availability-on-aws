@@ -43,7 +43,7 @@ The workflow simulates a production-style disaster recovery scenario where an EC
 
 An EC2 instance was launched to host the application server before backup operations.
 
-![EC2 Instance Running](./1-EC2-Instance-Running.png)
+![EC2 Instance Running](./1-ec2-instance-running.png)
 
 ---
 
@@ -51,7 +51,7 @@ An EC2 instance was launched to host the application server before backup operat
 
 An Amazon Machine Image (AMI) backup was created from the running EC2 instance.
 
-![AMI Create Popup](./2-AMI-Create-Popup.png)
+![AMI Create Popup](./2-ami-create-popup.png)
 
 ---
 
@@ -59,7 +59,7 @@ An Amazon Machine Image (AMI) backup was created from the running EC2 instance.
 
 The AMI backup became available and ready for disaster recovery usage.
 
-![AMI Available](./3-AMI-Available.png)
+![AMI Available](./3-ami-available.png)
 
 ---
 
@@ -67,7 +67,7 @@ The AMI backup became available and ready for disaster recovery usage.
 
 The original EC2 instance was terminated to simulate infrastructure failure.
 
-![EC2 Instance Terminated](./4-EC2-Instance-Terminated.png)
+![EC2 Instance Terminated](./4-ec2-instance-terminated.png)
 
 ---
 
@@ -75,7 +75,7 @@ The original EC2 instance was terminated to simulate infrastructure failure.
 
 A new EC2 instance was launched using the previously created AMI backup.
 
-![Recovered EC2 Instance Running](./5-Recovered-EC2-Instance-Running.png)
+![Recovered EC2 Instance Running](./5-rds-engine-selection.png)
 
 ---
 
