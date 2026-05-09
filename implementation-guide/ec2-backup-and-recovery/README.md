@@ -75,8 +75,6 @@ The original EC2 instance was terminated to simulate infrastructure failure.
 
 A new EC2 instance was launched using the previously created AMI backup.
 
-![Recovered EC2 Instance Running](./5-rds-engine-selection.png)
-
 ---
 
 # Recovery Validation
