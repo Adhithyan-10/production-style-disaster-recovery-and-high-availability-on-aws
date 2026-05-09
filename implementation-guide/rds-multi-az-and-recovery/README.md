@@ -47,7 +47,7 @@ The workflow simulates a production-style database disaster recovery architectur
 
 Amazon RDS MySQL database engine was selected for the disaster recovery implementation.
 
-![RDS Engine Selection](./1-rds-engine-selection.png)
+![RDS Engine Selection](./5-rds-engine-selection.png)
 
 ---
 
@@ -55,7 +55,7 @@ Amazon RDS MySQL database engine was selected for the disaster recovery implemen
 
 Database identifier, administrator username and authentication settings were configured.
 
-![RDS Credentials](./2-rds-credentials.png)
+![RDS Credentials](./6-rds-credentials.png)
 
 ---
 
@@ -63,7 +63,7 @@ Database identifier, administrator username and authentication settings were con
 
 VPC, subnet group and connectivity settings were configured for the RDS instance.
 
-![RDS Connectivity Settings](./3-rds-connectivity-settings.png)
+![RDS Connectivity Settings](./7-rds-connectivity-settings.png)
 
 ---
 
@@ -71,7 +71,7 @@ VPC, subnet group and connectivity settings were configured for the RDS instance
 
 The RDS database instance was successfully created and became available.
 
-![RDS Database Available](./4-rds-db-available.png)
+![RDS Database Available](./8-rds-db-available.png)
 
 ---
 
@@ -79,7 +79,7 @@ The RDS database instance was successfully created and became available.
 
 Multi-AZ deployment was enabled to provide high availability and automatic failover capability.
 
-![RDS Multi-AZ Configuration](./5-rds-multi-az-config.png)
+![RDS Multi-AZ Configuration](./9-rds-multi-az-config.png)
 
 ---
 
@@ -87,7 +87,7 @@ Multi-AZ deployment was enabled to provide high availability and automatic failo
 
 A manual RDS snapshot backup was created for disaster recovery purposes.
 
-![RDS Snapshot Available](./6-rds-snapshot-available.png)
+![RDS Snapshot Available](./10-rds-snapshot-available.png)
 
 ---
 
@@ -95,7 +95,7 @@ A manual RDS snapshot backup was created for disaster recovery purposes.
 
 The database restoration workflow was initiated using the previously created RDS snapshot.
 
-![RDS Restore Snapshot Page](./7-rds-restore-snapshot-page.png)
+![RDS Restore Snapshot Page](./11-rds-restore-snapshot-page.png)
 
 ---
 
