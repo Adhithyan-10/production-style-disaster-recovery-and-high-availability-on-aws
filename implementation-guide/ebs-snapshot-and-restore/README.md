@@ -80,7 +80,7 @@ This screenshot shows the EBS volume attached to the EC2 instance.
 
 ## 3️⃣ Disk Detected in EC2 Terminal
 
-![Disk Detected](./3-EC2-Terminal-Disk-Detected.png)
+![Disk Detected](./3-EC2-Terminal-Disk-detected.png)
 
 This screenshot validates that Linux successfully detected the attached EBS volume.
 
