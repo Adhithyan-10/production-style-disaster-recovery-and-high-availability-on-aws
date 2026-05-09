@@ -54,7 +54,7 @@ Recover Data Successfully
 
 ## 1️⃣ EBS Volume Created
 
-![EBS Volume Created](./screenshots/1️-EBS-Volume-Created.png)
+![EBS Volume Created](./1️⃣-EBS-Volume-Created.png)
 
 This screenshot shows the creation of a new Amazon EBS volume.
 
@@ -67,7 +67,7 @@ This screenshot shows the creation of a new Amazon EBS volume.
 
 ## 2️⃣ Volume Attached to EC2
 
-![Volume Attached](./screenshots/2️-Volume-Attached-to-EC2.png)
+![Volume Attached](./2️⃣-Volume-Attached-to-EC2.png)
 
 This screenshot shows the EBS volume attached to the EC2 instance.
 
@@ -80,7 +80,7 @@ This screenshot shows the EBS volume attached to the EC2 instance.
 
 ## 3️⃣ Disk Detected in EC2 Terminal
 
-![Disk Detected](./screenshots/3️-EC2-Terminal-Disk-detected.png)
+![Disk Detected](./3️⃣-EC2-Terminal-Disk-detected.png)
 
 This screenshot validates that Linux successfully detected the attached EBS volume.
 
@@ -99,7 +99,7 @@ fdisk -l
 
 ## 4️⃣ Mounted Volume in Linux
 
-![Mounted Volume](./screenshots/4️-EC2-Terminal-Mounted-Volume.png)
+![Mounted Volume](./4️⃣-EC2-Terminal-Mounted-Volume.png)
 
 This screenshot shows the EBS volume formatted and mounted successfully.
 
@@ -119,7 +119,7 @@ sudo mount /dev/xvdb /data
 
 ## 5️⃣ Data Written to EBS
 
-![Data Written](./screenshots/5️-Data-written-to-EBS.png)
+![Data Written](./5️⃣-Data-written-to-EBS.png)
 
 This screenshot shows application data written into the mounted EBS volume.
 
@@ -131,7 +131,7 @@ This screenshot shows application data written into the mounted EBS volume.
 
 ## 6️⃣ Snapshot Created
 
-![Snapshot Created](./screenshots/6️-Snapshot-Created.png)
+![Snapshot Created](./6️⃣-Snapshot-Created.png)
 
 This screenshot shows successful creation of an EBS snapshot.
 
@@ -143,7 +143,7 @@ This screenshot shows successful creation of an EBS snapshot.
 
 ## 7️⃣ New Volume from Snapshot
 
-![New Volume from Snapshot](./screenshots/7️-New-Volume-from-Snapshot.png)
+![New Volume from Snapshot](./7️⃣-New-Volume-from-Snapshot.png)
 
 This screenshot shows a new EBS volume restored from the snapshot backup.
 
@@ -155,7 +155,7 @@ This screenshot shows a new EBS volume restored from the snapshot backup.
 
 ## 8️⃣ Restored Volume Attached
 
-![Restored Volume Attached](./screenshots/8️-Restored-Volume-Attached.png)
+![Restored Volume Attached](./8️⃣-Restored-Volume-Attached.png)
 
 This screenshot shows the restored EBS volume attached to the EC2 instance.
 
@@ -167,7 +167,7 @@ This screenshot shows the restored EBS volume attached to the EC2 instance.
 
 ## 9️⃣ Restored Disk Mounted
 
-![Restored Disk Mounted](./screenshots/9️-Restored-Disk-Mounted.png)
+![Restored Disk Mounted](./9️⃣-Restored-Disk-Mounted.png)
 
 This screenshot validates successful recovery of stored data from the restored EBS volume.
 
