@@ -1,275 +1,232 @@
-# 🚨 AWS Disaster Recovery Architecture using EC2 AMI & RDS Snapshots
+# 🚨 Production-Style Disaster Recovery & High Availability on AWS
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AWS-Disaster%20Recovery-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-  <img src="https://img.shields.io/badge/EC2-AMI%20Backup-orange?style=for-the-badge&logo=amazonec2"/>
-  <img src="https://img.shields.io/badge/RDS-Snapshot%20Recovery-blue?style=for-the-badge&logo=amazonrds"/>
-  <img src="https://img.shields.io/badge/Cloud-Business%20Continuity-success?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/AWS-Disaster%20Recovery-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Cloud-High%20Availability-success?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/EC2-AMI%20Recovery-orange?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/RDS-Snapshot%20Recovery-blue?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/EBS-Snapshot%20Restore-yellow?style=for-the-badge"/>
+
 </p>
 
 <p align="center">
-Production-style Disaster Recovery implementation using EC2 AMIs and RDS Snapshots to recover servers and databases after failures.
+
+Production-style AWS implementation demonstrating Disaster Recovery, Backup Strategies, Recovery Workflows and High Availability concepts using EC2, EBS and RDS.
+
 </p>
 
 ---
 
-## 📖 Project Overview
+# ❓ What happens when your production system suddenly goes down?
 
-What happens when your production server suddenly goes down?
+Imagine:
 
-What happens if your application database becomes unavailable?
+❌ Your application server crashes at 2 AM  
+❌ A database outage affects users  
+❌ Critical data gets lost  
+❌ Human mistakes accidentally terminate resources  
+❌ Downtime impacts customers and business operations  
 
-In real-world environments, infrastructure failures are not a matter of **if**, but **when**.
+In real cloud environments, failures are not a matter of **if** — but **when**.
 
-Instances can fail. Databases can become unavailable. Human errors happen. Systems crash.
+Organizations prepare for these situations using **Disaster Recovery strategies and backup workflows**.
 
-Without a proper Disaster Recovery strategy:
+This project demonstrates a production-style AWS Disaster Recovery implementation using:
 
-❌ Applications become unavailable  
-❌ Data loss may occur  
-❌ Downtime impacts users and business operations  
-❌ Recovery becomes difficult and time consuming  
-
-This project demonstrates a practical **AWS Disaster Recovery strategy** by implementing:
-
-✅ EC2 server backup and recovery using **Amazon Machine Images (AMI)**  
-✅ Database backup and restoration using **Amazon RDS Snapshots**  
-✅ Failure simulation and recovery validation  
-✅ Production-style infrastructure thinking for business continuity  
-
-This project focuses not only on creating backups — but on ensuring systems can recover quickly with minimal downtime.
-
----
-
-# 🎯 Problem Statement
-
-Many applications rely on a single server and database.
-
-Possible failure scenarios:
-
-❌ EC2 instance accidentally terminated  
-❌ Server corruption  
-❌ Database outage  
-❌ Human mistakes  
-❌ Infrastructure failure  
-❌ Data loss situations  
-
-Without Disaster Recovery planning, restoring services becomes difficult.
-
-This project demonstrates how cloud backup and recovery strategies help maintain availability and business continuity.
+✅ EC2 AMI Backup & Recovery  
+✅ EBS Snapshot & Volume Restoration  
+✅ RDS Snapshot Recovery  
+✅ Multi-AZ concepts  
+✅ Recovery workflow validation  
+✅ High Availability understanding  
 
 ---
 
 # 🏗️ Architecture Diagram
 
-<p align="center">
-<img src="./images/arc.png" width="900">
-</p>
+<div align="center">
 
-### Architecture Flow
+<img src="./architecture/arc.png" width="95%" alt="Production Style Disaster Recovery Architecture">
 
-```text
-Users
-   ↓
-Application Server (EC2)
-   ↓
-Database (RDS)
-
-Backup Strategy:
-
-EC2 → Create AMI → Launch Recovery Instance
-
-RDS → Create Snapshot → Restore Database
-```
+</div>
 
 ---
 
-# ⚡ AWS Services Used
+# ⚡ Architecture Overview
 
-| Service | Purpose |
-|---|---|
-| Amazon EC2 | Application server |
-| Amazon AMI | Server backup |
-| Amazon RDS | Managed database |
-| RDS Snapshots | Database recovery |
-| VPC | Network isolation |
-| Security Groups | Access management |
+This architecture demonstrates how production systems improve reliability using:
+
+🔹 Application hosted on EC2  
+
+🔹 Database hosted on Amazon RDS  
+
+🔹 AMI backups for infrastructure recovery  
+
+🔹 EBS snapshots for storage recovery  
+
+🔹 RDS snapshots for database recovery  
+
+🔹 Multi-AZ concepts for High Availability  
+
+🔹 Backup and restore workflows to reduce downtime  
 
 ---
 
 # 🔄 Disaster Recovery Workflow
 
-## EC2 Recovery Process
+### EC2 Recovery
 
-### Step 1:
-Created production EC2 instance
-
-### Step 2:
-Configured application server
-
-### Step 3:
-Created AMI backup
-
-### Step 4:
-Simulated server failure by terminating instance
-
-### Step 5:
-Recovered infrastructure using saved AMI
-
-Result:
-
-✅ EC2 server restored successfully
+EC2 Instance  
+↓  
+Create AMI Backup  
+↓  
+Simulate Failure  
+↓  
+Launch New EC2 using AMI  
+↓  
+Application Restored  
 
 ---
 
-## RDS Recovery Process
+### EBS Recovery
 
-### Step 1:
-Created MySQL RDS database
-
-### Step 2:
-Configured networking and access settings
-
-### Step 3:
-Created manual database snapshot
-
-### Step 4:
-Simulated failure scenario
-
-### Step 5:
-Restored database using snapshot
-
-Result:
-
-✅ Database restored successfully
+EBS Volume  
+↓  
+Create Snapshot  
+↓  
+Restore Volume  
+↓  
+Attach Restored Volume  
+↓  
+Data Recovery Verified  
 
 ---
 
-# 📸 Project Screenshots
+### RDS Recovery
 
-## EC2 Instance Running
-
-<img src="./images/ec2-running.png">
-
----
-
-## Creating EC2 AMI Backup
-
-<img src="./images/create-ami.png">
+RDS Database  
+↓  
+Create Snapshot  
+↓  
+Restore Database  
+↓  
+Application Connectivity Restored  
 
 ---
 
-## AMI Successfully Created
+# 📁 Repository Structure
 
-<img src="./images/ami-created.png">
+```bash
+production-style-disaster-recovery-and-high-availability-on-aws/
 
----
-
-## Simulating EC2 Failure
-
-<img src="./images/ec2-terminated.png">
-
----
-
-## Recovered EC2 Instance
-
-<img src="./images/ec2-recovered.png">
-
----
-
-## Creating RDS Database
-
-<img src="./images/rds-create.png">
+├── architecture/
+│ └── arc.png
+│
+├── implementation-guide/
+│ ├── ebs-snapshot-and-restore/
+│ ├── ec2-ami-backup-and-recovery/
+│ └── rds-snapshot-recovery/
+│
+├── video-demo/
+│
+├── documentation/
+│
+└── README.md
+```
 
 ---
 
-## RDS Instance Running
+# 📸 Implementation Guide
 
-<img src="./images/rds-running.png">
+Detailed implementation screenshots available:
 
----
+### 📦 EBS Snapshot & Restore
 
-## Creating RDS Snapshot
+Backup and restoration workflow using EBS snapshots.
 
-<img src="./images/rds-snapshot.png">
-
----
-
-## Restoring Database from Snapshot
-
-<img src="./images/rds-restore.png">
+📁 implementation-guide/ebs-snapshot-and-restore/
 
 ---
 
-# 📊 Key Learnings
+### 🖥️ EC2 AMI Backup & Recovery
 
-Through this project I learned:
+AMI-based infrastructure recovery workflow.
 
-- Disaster Recovery planning in AWS
-- Difference between backup and recovery
-- EC2 restoration using AMIs
-- RDS snapshot recovery process
-- Infrastructure resilience strategies
-- Recovery validation process
-- Business continuity concepts
+📁 implementation-guide/ec2-ami-backup-and-recovery/
 
 ---
 
-# ⚠️ Common Mistakes
+### 🗄️ RDS Snapshot Recovery
 
-❌ Creating backups but never testing restoration
+Database backup and restoration workflow.
 
-❌ Ignoring database recovery plans
-
-❌ Depending on a single server
-
-❌ Missing security configurations during recovery
-
-❌ Assuming backups alone guarantee availability
-
----
-
-# 🚀 Future Improvements
-
-- Cross-region disaster recovery
-- Multi-AZ deployments
-- Automated backup scheduling
-- CloudWatch monitoring
-- Route53 failover routing
-- Infrastructure as Code using Terraform
+📁 implementation-guide/rds-snapshot-recovery/
 
 ---
 
 # 📄 Documentation
 
-Detailed implementation guide with screenshots and architecture explanation:
+Complete project documentation with architecture explanation, screenshots, implementation details, recovery workflow, learnings, and notes.
 
-📘 **[View Documentation](./documentation/AWS_Disaster_Recovery.pdf)**
-
----
-
-# 👨‍💻 About Me
-
-I'm **Adhithyan Sivaraman T**, a Computer Science and Engineering student passionate about Cloud Computing, DevOps, and project-based learning.
-
-Instead of only learning concepts theoretically, I focus on building real-world projects, documenting them, and consistently sharing my learning journey through GitHub and LinkedIn.
-
-I strongly believe the best way to learn cloud is by building systems and understanding how real infrastructure works.
-
-Currently building:
-
-☁️ AWS Projects  
-⚙️ DevOps Projects  
-🚀 Production-style Architectures  
-📘 Learning in Public
+📘 [View Documentation](./documentation/AWS_Disaster_Recovery.pdf)
 
 ---
 
-## 🌐 Connect With Me
+# 🎥 Project Demo
 
-🔗 LinkedIn: www.linkedin.com/in/adhithyan-sivaraman-t-399b5b362
+Watch implementation walkthrough and recovery demonstrations:
 
-💻 GitHub: https://github.com/Adhithyan-10
+📹 [View Demo Videos](./video-demo)
+
+---
+
+# 💡 Key Learnings
+
+✔ Difference between backup and recovery  
+
+✔ Infrastructure restoration using AMIs  
+
+✔ EBS volume recovery strategies  
+
+✔ Database restoration workflows  
+
+✔ Disaster Recovery planning concepts  
+
+✔ Business continuity thinking  
+
+✔ Production-style cloud architecture understanding  
+
+---
+
+# 👨‍💻 Author
+
+## Adhithyan Sivaraman T
+
+Computer Science and Engineering student passionate about:
+
+☁️ Cloud Computing  
+⚙️ DevOps  
+🚀 Production Architecture  
+📘 Project-Based Learning  
+
+Everything I build is documented in a structured way through architecture diagrams, implementation guides, technical documentation and consistently shared on GitHub and LinkedIn as part of my learning journey.
+
+---
+
+# 🔗 Connect With Me
+
+LinkedIn:
+
+www.linkedin.com/in/adhithyan-sivaraman-t-399b5b362
+
+GitHub:
+
+https://github.com/Adhithyan-10
 
 ---
 
