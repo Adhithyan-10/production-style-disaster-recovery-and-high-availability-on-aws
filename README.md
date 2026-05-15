@@ -172,7 +172,7 @@ Database availability and recovery implementation.
 
 Complete project documentation with architecture explanation, screenshots, implementation details, recovery workflow, learnings, and notes.
 
-📘 [View Documentation](./documentation/disaster_doc.pdf)
+📘 [View Documentation](./documentation/Disaster_Doc.pdf)
 
 ---
 
