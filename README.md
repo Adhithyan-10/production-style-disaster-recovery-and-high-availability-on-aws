@@ -139,8 +139,6 @@ production-style-disaster-recovery-and-high-availability-on-aws/
 └── README.md
 ```
 
----
-
 # 📸 Implementation Guide
 
 Detailed hands-on implementation screenshots and walkthroughs:
@@ -149,7 +147,7 @@ Detailed hands-on implementation screenshots and walkthroughs:
 
 Backup and restoration workflow using EBS snapshots.
 
-📁 `implementation-guide/ebs-snapshot-and-restore/`
+👉 **[Click Here](./implementation-guide/ebs-snapshot-and-restore)**
 
 ---
 
@@ -157,7 +155,7 @@ Backup and restoration workflow using EBS snapshots.
 
 AMI-based EC2 backup and recovery implementation.
 
-📁 `implementation-guide/ec2-backup-and-recovery/`
+👉 **[Click Here](./implementation-guide/ec2-backup-and-recovery)**
 
 ---
 
@@ -165,9 +163,10 @@ AMI-based EC2 backup and recovery implementation.
 
 Database availability and recovery implementation.
 
-📁 `implementation-guide/rds-multi-az-and-recovery/`
+👉 **[Click Here](./implementation-guide/rds-multi-az-and-recovery)**
 
 ---
+
 
 # 📄 Documentation
 
